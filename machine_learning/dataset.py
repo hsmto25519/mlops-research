@@ -4,7 +4,7 @@ from loguru import logger
 from tqdm import tqdm
 import typer
 
-from machine-learning.config import PROCESSED_DATA_DIR, RAW_DATA_DIR
+from machine_learning.config import PROCESSED_DATA_DIR, RAW_DATA_DIR
 
 app = typer.Typer()
 

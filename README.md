@@ -27,7 +27,7 @@ For investigating the best MLOps structure
 │                         `1.0-jqp-initial-data-exploration`.
 │
 ├── pyproject.toml     <- Project configuration file with package metadata for 
-│                         machine-learning and configuration for tools like black
+│                         machine_learning and configuration for tools like black
 │
 ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
 │
@@ -39,9 +39,9 @@ For investigating the best MLOps structure
 │
 ├── setup.cfg          <- Configuration file for flake8
 │
-└── machine-learning   <- Source code for use in this project.
+└── machine_learning   <- Source code for use in this project.
     │
-    ├── __init__.py             <- Makes machine-learning a Python module
+    ├── __init__.py             <- Makes machine_learning a Python module
     │
     ├── config.py               <- Store useful variables and configuration
     │
