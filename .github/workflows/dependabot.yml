@@ -1,0 +1,28 @@
+### sample dependabot setting
+###
+version: 2
+updates:
+  # Python (pipx / pip dependencies)
+  - package-ecosystem: "pip"
+    directory: "/" # adjust if requirements.txt is in subdir
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+    open-pull-requests-limit: 10
+
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+
+  # Terraform (providers + modules)
+  - package-ecosystem: "terraform"
+    directory: "/" # path to main.tf / .tf files
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
