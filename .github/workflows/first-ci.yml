@@ -27,7 +27,7 @@ jobs:
           pip install flake8 black
 
       - name: Run flake8
-        run: flake8 src/ --max-line-length=100
+        run: flake8  machine-learning/ --max-line-length=100
 
       - name: Run black check
-        run: black --check src/
+        run: black --check  machine-learning/
