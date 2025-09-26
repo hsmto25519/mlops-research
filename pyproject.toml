@@ -3,7 +3,7 @@ requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "machine-learning"
+name = "machine_learning"
 version = "0.0.1"
 description = "For investigating the best MLOps structure"
 authors = [
@@ -47,7 +47,7 @@ exclude = '''
 
 [tool.isort]
 profile = "black"
-known_first_party = ["machine-learning"]
+known_first_party = ["machine_learning"]
 force_sort_within_sections = true
 
 

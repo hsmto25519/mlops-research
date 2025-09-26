@@ -29,15 +29,15 @@ clean:
 ## Lint using flake8, black, and isort (use `make format` to do formatting)
 .PHONY: lint
 lint:
-	flake8 machine-learning
-	isort --check --diff machine-learning
-	black --check machine-learning
+	flake8 machine_learning
+	isort --check --diff machine_learning
+	black --check machine_learning
 
 ## Format source code with black
 .PHONY: format
 format:
-	isort machine-learning
-	black machine-learning
+	isort machine_learning
+	black machine_learning
 
 
 
@@ -57,7 +57,7 @@ test:
 ## Make dataset
 .PHONY: data
 data: requirements
-	$(PYTHON_INTERPRETER) machine-learning/dataset.py
+	$(PYTHON_INTERPRETER) machine_learning/dataset.py
 
 
 #################################################################################
