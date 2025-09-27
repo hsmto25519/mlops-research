@@ -6,7 +6,7 @@ updates:
   - package-ecosystem: "pip"
     directory: "/" # adjust if requirements.txt is in subdir
     schedule:
-      interval: "weekly"
+      interval: "monthly"
     labels:
       - "dependencies"
     open-pull-requests-limit: 10
@@ -15,7 +15,7 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
     labels:
       - "dependencies"
 
@@ -23,6 +23,6 @@ updates:
   - package-ecosystem: "terraform"
     directory: "/" # path to main.tf / .tf files
     schedule:
-      interval: "weekly"
+      interval: "monthly"
     labels:
       - "dependencies"
