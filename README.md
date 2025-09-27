@@ -69,4 +69,6 @@ ccds
 
 ### DVCでのdata管理
 
-### 
+### traningに利用したサンプルのデータセット
+* crocodile datasets
+  * https://www.kaggle.com/datasets/zadafiyabhrami/global-crocodile-species-dataset/data
