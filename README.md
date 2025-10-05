@@ -67,6 +67,16 @@ pipx install cookiecutter-data-science
 ccds
 ```
 
+## 実行
+web app
+```
+uvicorn app.main:app --reload
+```
+
+## ライブラリ管理
+requirements.txtはweb appのライブラリを管理
+pyproject.tomlでML関連のライブラリを管理
+
 ### DVCでのdata管理
 
 ### traningに利用したサンプルのデータセット
