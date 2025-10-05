@@ -59,6 +59,54 @@ For investigating the best MLOps structure
 
 --------
 
+## 全体像
+
+以下全体像。あとで修正する。
+
+```mermaid
+graph TD
+    subgraph "User"
+        A["<i class='fa fa-user'></i> User's Browser"]
+    end
+
+    subgraph "Frontend on AWS"
+        B["<i class='fa fa-cloud'></i> CloudFront CDN"]
+        C["<i class='fa fa-archive'></i> S3 Bucket<br>(Static TypeScript App)"]
+    end
+
+    subgraph "Backend on AWS"
+        D["<i class='fa fa-server'></i> API Gateway"]
+        E["<i class='fa fa-microchip'></i> Lambda Function"]
+        subgraph E ["Container"]
+            F["<i class='fa fa-code'></i> FastAPI Backend"]
+            G["<i class='fa fa-brain'></i> ML Model"]
+        end
+    end
+
+    %% --- Define Interaction Flows ---
+    A -- "1. Requests website" --> B;
+    B -- "2. Fetches static files" --> C;
+    C -- "3. Serves HTML, JS, CSS" --> A;
+    
+    A -- "4. User submits data for prediction<br>(API Call)" --> D;
+    D -- "5. Triggers function" --> E;
+    E -- "6. Invokes FastAPI endpoint" --> F;
+    F -- "7. Loads model & gets prediction" --> G;
+    G -- "8. Returns prediction" --> F;
+    F -- "9. Sends HTTP response" --> E;
+    E -- "10. Returns response" --> D;
+    D -- "11. Forwards prediction to user" --> A;
+
+    %% --- Styling ---
+    linkStyle 0,1,2 stroke:#2a9d8f,stroke-width:2px
+    linkStyle 3,4,5,6,7,8,9,10 stroke:#e76f51,stroke-width:2px
+
+    classDef default fill:#f4f4f4,stroke:#333,stroke-width:2px
+    classDef user fill:#e9c46a,stroke:#333,stroke-width:2px
+
+    class A user
+```
+
 ## Setup手順
 ### cookiecutter-data-scienceの構成を準備
 * https://github.com/drivendataorg/cookiecutter-data-science
