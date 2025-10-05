@@ -72,7 +72,7 @@ def predict(data: ModelInput):
 
     try:
         # Convert the Pydantic model to a pandas DataFrame
-        input_df = pd.DataFrame([data.dict()])
+        input_df = pd.DataFrame([data.model_dump()])
         
         # Make a prediction
         prediction_result = app.state.model.predict(input_df)[0]

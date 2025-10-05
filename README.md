@@ -70,6 +70,7 @@ ccds
 ## 実行
 web app
 ```
+source .venv/bin/activate  # you can use your own venv
 uvicorn app.main:app --reload
 ```
 
